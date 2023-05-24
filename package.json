@@ -16,15 +16,12 @@
   "devDependencies": {
     "prettier": "^2.8.8"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "start": "gatsby develop",
+    "start": "gatsby clean && npm run format && gatsby build && gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
@@ -33,7 +30,7 @@
     "type": "git",
     "url": "https://github.com/MarcCollado/guest-notifier"
   },
-    "prettier": {
+  "prettier": {
     "singleQuote": true
   }
 }
