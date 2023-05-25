@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Marc Collado <marc@collado.io>",
   "dependencies": {
+    "@fontsource/poppins": "^5.0.1",
     "gatsby": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
@@ -12,8 +13,7 @@
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-transformer-sharp": "^5.10.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typeface-poppins": "^1.1.13"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
