@@ -1,6 +1,7 @@
 @import '@fontsource/poppins/400.css';
 @import '@fontsource/poppins/600.css';
 @import '@fontsource/poppins/700.css';
+@import 'modern-normalize/modern-normalize.css';
 
 :root {
   /* purple */
@@ -37,7 +38,7 @@
   --line-height-normal: 1.5;
   --line-height-loose: 1.75;
 
-  /* spaces and positions */
+  /* spacing */
   --space-1: 1px;
   --space-2: 2px;
   --space-4: 4px;
@@ -48,6 +49,9 @@
   --space-40: 40px;
   --space-56: 56px;
   --space-64: 64px;
+  --minWidth: 360px;
+  --maxWidth: 1440px;
+  --fluidRatio: 22.5;
 }
 
 html {
@@ -56,8 +60,8 @@ html {
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   margin: 0 auto;
-  max-width: 1440px;
-  min-width: 360px;
+  min-width: var(--minWidth);
+  max-width: var(--maxWidth);
   /* defaults */
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -69,11 +73,12 @@ body {
   font-family: sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
-  margin: 0 var(--space-4);
+  margin: 0 calc(100vw / var(--fluidRatio));
+  min-width: calc(var(--minWidth) - var(--space-16) * 2);
+  max-width: calc(var(--maxWidth) - var(--space-64) * 2);
   /* defaults */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  word-wrap: break-word;
 }
 
 .main-container {
