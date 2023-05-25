@@ -1,4 +1,6 @@
-@import 'typeface-poppins';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
 
 :root {
   /* purple */
@@ -21,29 +23,31 @@
   /* ... */
 
   /* fonts */
-  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
-  --font-lg: 18px;
-  --font-md: 16px;
-  --font-sm: 14px;
+  --font-sans: 'Poppins', -apple-system, sans-serif;
+  --font-mono: Menlo, Monaco, monospace;
   --font-sx: 12px;
-  --line-height-loose: 1.75;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-h3: 24px;
+  --font-h2: 32px;
+  --font-h1: 40px;
+  --font-h1-display: 56px;
+  --line-height-dense: 1.333;
   --line-height-normal: 1.5;
-  --line-height-dense: 1.1;
+  --line-height-loose: 1.75;
 
   /* spaces and positions */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 64px;
-  --size-content: 50rem;
-  --size-gutter: var(--space-5);
-  --size-gap: var(--space-6);
-  --border-radius: var(--space-1);
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-56: 56px;
+  --space-64: 64px;
 }
 
 html {
@@ -53,7 +57,7 @@ html {
   line-height: var(--line-height-normal);
   margin: 0 auto;
   max-width: 1440px;
-  min-width: 375px;
+  min-width: 360px;
   /* defaults */
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -83,14 +87,82 @@ footer {
 }
 
 /* fonts */
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: var(--line-height-dense);
+}
+
+h4,
+h5 {
+  line-height: var(--line-height-normal);
+}
+
+h1 {
+  font-size: var(--font-h1);
+}
+
+h2 {
+  font-size: var(--font-h2);
+}
+
+h3 {
+  font-size: var(--font-h3);
+}
+
+h4 {
+  font-size: var(--font-lg);
+}
+
+h5 {
+  font-size: var(--font-md);
+}
+
+h1.display {
+  font-size: var(--font-h1-display);
+  font-weight: 700;
+  line-height: var(--line-height-normal);
+}
+
 p {
   font-size: var(--font-md);
+  font-weight: 400;
+  line-height: var(--line-height-normal);
+}
+
+p.caption {
+  font-size: var(--font-sx);
+  line-height: var(--line-height-dense);
 }
 
 p.small {
   font-size: var(--font-sm);
 }
 
-p.big {
+p.large {
   font-size: var(--font-lg);
+  line-height: var(--line-height-dense);
+}
+
+strong {
+  font-weight: 600;
+}
+
+button {
+  font-size: var(--font-md);
+  font-weight: 600;
+  line-height: var(--line-height-normal);
+}
+
+button.large {
+  font-size: var(--font-lg);
+  line-height: var(--line-height-dense);
+}
+
+@media (max-width: 768px) {
+  h1.display {
+    font-size: var(--font-h2);
+  }
 }
