@@ -20,7 +20,7 @@
   /* tertiary */
   /* ... */
 
-  /* font */
+  /* fonts */
   --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
@@ -33,7 +33,7 @@
   --line-height-normal: 1.5;
   --line-height-dense: 1.1;
 
-  /* space and position */
+  /* spaces and positions */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
@@ -75,4 +75,22 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  margin: auto;
+}
+
+/* fonts */
+p {
+  font-size: var(--font-md);
+}
+
+p.small {
+  font-size: var(--font-sm);
+}
+
+p.big {
+  font-size: var(--font-lg);
 }
