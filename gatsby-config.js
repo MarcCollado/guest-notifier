@@ -1,12 +1,7 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
+
 module.exports = {
   siteMetadata: {
     title: `Guest Notifier`,
@@ -43,8 +38,10 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#8590F5`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/favicon.ico`,
       },
     },
   ],
 };
+
+// 📍 https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
