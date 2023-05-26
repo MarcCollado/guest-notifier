@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Guest Notifier`,
+        short_name: `GuestNotifier`,
         start_url: `/`,
         background_color: `#8590F5`,
         // https://css-tricks.com/meta-theme-color-and-trickery/
