@@ -1,0 +1,33 @@
+.container {
+  background-color: var(--color-purple);
+  border-radius: var(--space-16);
+  height: 300px;
+  overflow: auto;
+  text-align: center;
+}
+
+h1.siteTitle {
+  color: var(--color-white);
+  margin-block: var(--space-56) var(--space-8);
+}
+
+p.tagline {
+  color: var(--color-white);
+}
+
+.child-container {
+  /* order: 1; */
+  flex-basis: 1 1 auto;
+  align-self: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    height: 464px;
+  }
+
+  h1.siteTitle {
+    margin-block: calc(2 * var(--space-64)) var(--space-16);
+    max-width: 876px;
+  }
+}
