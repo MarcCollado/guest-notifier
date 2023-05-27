@@ -73,7 +73,6 @@ html {
   /* defaults */
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 
 body {
@@ -104,6 +103,17 @@ footer {
 }
 
 /* typography */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  margin: 0px;
+}
+
 h1,
 h2,
 h3 {
@@ -203,4 +213,12 @@ a:focus {
 
 @media (min-width: 1440px) {
   /* ... */
+}
+
+/* Classes */
+
+.center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
