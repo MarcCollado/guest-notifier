@@ -197,25 +197,25 @@ a:focus {
   text-decoration: none;
 }
 
-@media (min-width: 576px) {
+@media (width > 576px) {
   /* ... */
 }
 
-@media (min-width: 768px) {
+@media (width > 768px) {
   h1.display {
     font-size: var(--font-h1-display);
   }
 }
 
-@media (min-width: 1024px) {
+@media (width > 1024px) {
   /* ... */
 }
 
-@media (min-width: 1440px) {
+@media (width > 1440px) {
   /* ... */
 }
 
-/* Classes */
+/* Special classes */
 
 .center {
   display: flex;
