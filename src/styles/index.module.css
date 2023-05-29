@@ -1,3 +1,22 @@
+.featuredGuestsContainer {
+  --w: 400px;
+  --n: 4;
+  --m: 2;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      clamp(
+        100%/ (var(--n) + 1) + 0.1%,
+        (var(--w) - 100vw) * 1000,
+        100%/ (var(--m) + 1) + 0.1%
+      ),
+      1fr
+    )
+  ); /*this */
+  gap: 16px;
+}
+
 .list {
   display: grid;
   margin: 0;
