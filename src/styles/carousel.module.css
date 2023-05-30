@@ -1,0 +1,53 @@
+.carouselContainer {
+  text-align: center;
+  overflow: hidden;
+}
+
+.carouselItems {
+  display: flex;
+  gap: var(--space-16);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carouselItems > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  position: relative;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  scroll-snap-align: start;
+}
+
+.carouselContainer > a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--color-gray-medium);
+  height: var(--space-8);
+  margin: var(--space-16) var(--space-4) 0 0;
+  text-decoration: none;
+  border-radius: 50%;
+  width: var(--space-8);
+  position: relative;
+}
+
+.carouselContainer > a:hover {
+  background: var(--color-gray-dark);
+}
+
+.carouselContainer > a:focus {
+  background: var(--color-black);
+}
+
+.carouselContainer > a:active {
+  background: var(--color-black);
+}
