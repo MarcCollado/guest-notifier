@@ -1,20 +1,15 @@
 import * as React from 'react';
 
+import Carousel from '../components/carousel';
 import Hero from '../components/hero';
 import Seo from '../components/seo';
-import GuestCard from '../components/guest-card';
-
-import * as styles from '/src/styles/index.module.css';
-
-const renderGuests = (numOfGuests) => {
-  return Array.from({ length: numOfGuests }, (_, i) => <GuestCard key={i} />);
-};
+import * as styles from '../styles/index.module.css';
 
 const IndexPage = () => (
-  <>
+  <div className={styles.indexContainer}>
     <Hero />
-    <div className={styles.featuredGuestsContainer}>{renderGuests(8)}</div>
-  </>
+    <Carousel items={parseInt(8)} />
+  </div>
 );
 
 export const Head = () => <Seo title="Home" />;
