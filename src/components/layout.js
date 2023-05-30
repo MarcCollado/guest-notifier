@@ -15,9 +15,9 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <div className="main-container">
+    <div className="layout-container">
       <Navbar siteTitle={data.site.siteMetadata?.title || `Guest Notifier`} />
-      <main>{children}</main>
+      {children}
       <footer>
         <p className="small">
           © {new Date().getFullYear()} &middot; Built with ❤️ love from ☀️
