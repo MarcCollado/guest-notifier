@@ -19,10 +19,10 @@ const Layout = ({ children }) => {
       <Navbar siteTitle={data.site.siteMetadata?.title || `Guest Notifier`} />
       {children}
       <footer>
-        <p className="small">
+        {/* <p className="small">
           © {new Date().getFullYear()} &middot; Built with ❤️ love from ☀️
           Barcelona
-        </p>
+        </p> */}
       </footer>
     </div>
   );
