@@ -8,7 +8,7 @@ import * as styles from '../styles/index.module.css';
 const IndexPage = () => (
   <div className={styles.indexContainer}>
     <Hero />
-    <Carousel items={parseInt(8)} />
+    <Carousel id="featured" items={parseInt(8)} />
   </div>
 );
 
