@@ -3,29 +3,27 @@ import * as React from 'react';
 import GuestCard from './guest-card';
 import * as styles from '../styles/carousel.module.css';
 
-const renderCarouselItems = (numOfItems) => {
+const renderCarouselItems = (carouselId, numOfItems) => {
   return Array.from({ length: numOfItems }, (_, i) => (
-    <GuestCard key={i + 1} href={`slide-${i + 1}`}>
-      {`${i + 1}`}
+    <GuestCard key={i + 1} href={`${carouselId}-${i + 1}`}>
+      {`API item #${i + 1}`}
     </GuestCard>
   ));
 };
 
-const Carousel = (props) => {
+const renderCarouselNav = (carouselId, numOfItems) => {
+  return Array.from({ length: numOfItems }, (_, i) => (
+    <a href={`#${carouselId}-${i + 1}`}></a>
+  ));
+};
+
+const Carousel = ({ items, id }) => {
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.carouselItems}>
-        {renderCarouselItems(props.items)}
+        {renderCarouselItems(id, items)}
       </div>
-
-      <a href="#slide-1"></a>
-      <a href="#slide-2"></a>
-      <a href="#slide-3"></a>
-      <a href="#slide-4"></a>
-      <a href="#slide-5"></a>
-      <a href="#slide-6"></a>
-      <a href="#slide-7"></a>
-      <a href="#slide-8"></a>
+      {renderCarouselNav(id, items)}
     </div>
   );
 };
