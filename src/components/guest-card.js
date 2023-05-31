@@ -1,24 +1,23 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import * as styles from '../styles/guest-card.module.css';
 
-const GuestCard = forwardRef((props, ref) => {
+const GuestCard = ({ children, index, onRenderItem }) => {
   const itemRef = useRef(null);
 
   useEffect(() => {
-    if (!!itemRef) {
-      props.onRenderItem({
-        index: props.index,
+    !!itemRef &&
+      onRenderItem({
+        index: index,
         ref: itemRef,
       });
-    }
   }, [itemRef]);
 
   return (
     <div className={`center ${styles.guestCardContainer}`} ref={itemRef}>
-      {props.children}
+      {children}
     </div>
   );
-});
+};
 
 export default GuestCard;
