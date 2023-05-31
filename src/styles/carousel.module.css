@@ -5,6 +5,7 @@
 
 .carouselItems {
   display: flex;
+  flex-flow: row nowrap;
   gap: var(--space-16);
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -15,8 +16,10 @@
 
 .carouselItems > div {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+
   flex-shrink: 0;
 
   position: relative;
