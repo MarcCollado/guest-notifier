@@ -3,5 +3,5 @@
   border-radius: var(--space-16);
   box-shadow: 0 0 var(--space-16) rgba(143, 143, 143, 0.1);
   height: 225px;
-  width: 316px;
+  width: clamp(225px, 100%, 316px);
 }
