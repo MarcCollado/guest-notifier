@@ -4,14 +4,12 @@ import GuestCard from './guest-card';
 import * as styles from '../styles/carousel.module.css';
 
 const renderCarouselItems = (allGuests, addItemToRefList) =>
-  allGuests.map((g, i) => (
-    <GuestCard key={i} guest={g} id={i} onRenderItem={addItemToRefList} />
+  allGuests.map((g) => (
+    <GuestCard key={g.id} guest={g} onRenderItem={addItemToRefList} />
   ));
 
-const renderCarouselNav = (n, onClick) =>
-  Array.from({ length: n }, (_, i) => (
-    <a key={i} onClick={() => onClick(i)}></a>
-  ));
+const renderCarouselNav = (allGuests, onClick) =>
+  allGuests.map((g) => <a key={g.id} onClick={() => onClick(g.id)}></a>);
 
 const Carousel = ({ allGuests }) => {
   const [refList, setRefList] = useState([]);
@@ -28,7 +26,7 @@ const Carousel = ({ allGuests }) => {
       <div className={styles.carouselItems}>
         {renderCarouselItems(allGuests, refListGenerator)}
       </div>
-      {renderCarouselNav(allGuests.length, onClick)}
+      {renderCarouselNav(allGuests, onClick)}
     </div>
   );
 };
