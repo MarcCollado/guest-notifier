@@ -14,7 +14,7 @@ const GuestCard = ({ guest, onRenderItem }) => {
   }, [itemRef, guest, onRenderItem]);
 
   return (
-    <div className={`center ${styles.guestCardContainer}`} ref={itemRef}>
+    <div className={styles.guestCardContainer} ref={itemRef}>
       {guest.name} {guest.surname} {guest.id}
     </div>
   );
