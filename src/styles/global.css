@@ -214,11 +214,3 @@ a:focus {
 @media (width > 1440px) {
   /* ... */
 }
-
-/* Special classes */
-
-.center {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
