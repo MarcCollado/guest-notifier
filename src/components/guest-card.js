@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import * as styles from '../styles/guest-card.module.css';
 
-const GuestCard = ({ children, id, onRenderItem }) => {
+const GuestCard = ({ guest, id, onRenderItem }) => {
   const itemRef = useRef(null);
 
   useEffect(() => {
@@ -11,11 +11,11 @@ const GuestCard = ({ children, id, onRenderItem }) => {
         position: id,
         ref: itemRef,
       });
-  }, [itemRef]);
+  }, [itemRef, id, onRenderItem]);
 
   return (
     <div className={`center ${styles.guestCardContainer}`} ref={itemRef}>
-      {children}
+      {guest.name} {guest.surname} {guest.id}
     </div>
   );
 };

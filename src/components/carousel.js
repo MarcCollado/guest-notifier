@@ -3,21 +3,17 @@ import React, { useState } from 'react';
 import GuestCard from './guest-card';
 import * as styles from '../styles/carousel.module.css';
 
-const renderCarouselItems = (n, addItemToRefList) => {
-  return Array.from({ length: n }, (_, i) => (
-    <GuestCard
-      key={i}
-      onRenderItem={addItemToRefList}
-    >{`API item #${i}`}</GuestCard>
+const renderCarouselItems = (allGuests, addItemToRefList) =>
+  allGuests.map((g, i) => (
+    <GuestCard key={i} guest={g} id={i} onRenderItem={addItemToRefList} />
   ));
-};
 
 const renderCarouselNav = (n, onClick) =>
   Array.from({ length: n }, (_, i) => (
     <a key={i} onClick={() => onClick(i)}></a>
   ));
 
-const Carousel = ({ items }) => {
+const Carousel = ({ allGuests }) => {
   const [refList, setRefList] = useState([]);
 
   const refListGenerator = (obj) => refList.push(obj) && setRefList(refList);
@@ -30,9 +26,9 @@ const Carousel = ({ items }) => {
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.carouselItems}>
-        {renderCarouselItems(items, refListGenerator)}
+        {renderCarouselItems(allGuests, refListGenerator)}
       </div>
-      {renderCarouselNav(items, onClick)}
+      {renderCarouselNav(allGuests.length, onClick)}
     </div>
   );
 };
