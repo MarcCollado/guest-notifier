@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from 'react';
 
 import * as styles from '../styles/guest-card.module.css';
 
-const GuestCard = ({ children, index, onRenderItem }) => {
+const GuestCard = ({ children, key, onRenderItem }) => {
   const itemRef = useRef(null);
 
   useEffect(() => {
     !!itemRef &&
       onRenderItem({
-        index: index,
+        position: key,
         ref: itemRef,
       });
   }, [itemRef]);
