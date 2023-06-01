@@ -1,18 +1,30 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 
 import Carousel from '../components/carousel';
 import Hero from '../components/hero';
 import Seo from '../components/seo';
 import * as styles from '../styles/index.module.css';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div className={styles.indexContainer}>
     <Hero />
-    <Carousel items={parseInt(8)} />
+    <Carousel allGuests={data.allGuests.nodes} />
   </div>
 );
-
 export const Head = () => <Seo title="Home" />;
+
+export const query = graphql`
+  {
+    allGuests {
+      nodes {
+        id
+        name
+        surname
+      }
+    }
+  }
+`;
 
 export default IndexPage;
 
