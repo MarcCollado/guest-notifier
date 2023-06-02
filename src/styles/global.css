@@ -54,6 +54,7 @@
   --space-24: 24px;
   --space-32: 32px;
   --space-40: 40px;
+  --space-48: 48px;
   --space-56: 56px;
   --space-64: 64px;
   --minWidth: 360px;
@@ -81,7 +82,7 @@ body {
   font-family: var(--font-sans);
   font-weight: normal;
   /* 16px @ 360vw && 64px @ 1440vw */
-  margin: 0 min(var(--space-64), calc(100vw / var(--fluidRatio)));
+  /* margin: 0 min(var(--space-64), calc(100vw / var(--fluidRatio))); */
   /* 328px @ 360vw */
   /* min-width: calc(var(--minWidth) - var(--space-16) * 2); */
   /* 1312px @ 1440vw */
