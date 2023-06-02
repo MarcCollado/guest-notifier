@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.carouselContainer div:first-child {
+  margin-inline-start: min(var(--space-64), calc(100vw / var(--fluidRatio)));
+}
+
 .carouselItems {
   display: flex;
   flex-flow: row nowrap;
@@ -19,7 +23,6 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-
   flex-shrink: 0;
 
   position: relative;
