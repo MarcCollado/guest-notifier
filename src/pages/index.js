@@ -9,6 +9,7 @@ import * as styles from '../styles/index.module.css';
 const IndexPage = ({ data }) => (
   <div className={styles.indexContainer}>
     <Hero />
+    <h2>Featured Guests</h2>
     <Carousel allGuests={data.allGuests.nodes} />
   </div>
 );
