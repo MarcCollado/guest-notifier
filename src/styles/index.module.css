@@ -2,5 +2,9 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  gap: var(--space-64);
+}
+
+.indexContainer > h2 {
+  margin: var(--space-32) min(var(--space-64), calc(100vw / var(--fluidRatio)))
+    var(--space-16);
 }
