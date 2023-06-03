@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+// import { useStaticQuery, graphql } from 'gatsby';
 
 import Navbar from './navbar';
 
 const Layout = ({ children }) => {
+  /*
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -13,10 +14,10 @@ const Layout = ({ children }) => {
       }
     }
   `);
-
+  */
   return (
     <div className="layout-container">
-      <Navbar siteTitle={data.site.siteMetadata?.title || `Guest Notifier`} />
+      <Navbar />
       {children}
       <footer>
         {/* <p className="small">
