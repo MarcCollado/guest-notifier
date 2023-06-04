@@ -15,3 +15,9 @@
   /* align-content: normal; */
   gap: 0px var(--space-16);
 }
+
+@media (max-width: 768px) {
+  .logoContainer > div:last-child {
+    display: none;
+  }
+}
